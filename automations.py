@@ -20,7 +20,5 @@ def yahooNio():
     time.sleep(3)
     driver.find_element(By.XPATH, '//*[@id="Col1-1-HistoricalDataTable-Proxy"]/section/div[1]/div[2]/span[2]/a/span').click()
     time.sleep(3)
-
-
-
+    
 yahooNio()

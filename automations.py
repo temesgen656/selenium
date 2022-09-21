@@ -22,5 +22,5 @@ def yahooNio():
     time.sleep(3)
 
 
-yahooNio()
 
+yahooNio()

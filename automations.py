@@ -14,18 +14,19 @@ def yahooNio():
     options.add_argument("--window-size=1920,1200")
 
     # Accepting downloads without GUI
-    options.add_experimental_option("prefs", {
-    "download.default_directory": r"/Users/temesgenalemayehu/Downloads",
-    "download.prompt_for_download": False,
-    "download.directory_upgrade": True,
-    "safebrowsing_for_trusted_sources_enabled": False,
-    "safebrowsing.enabled": False
-    })
-    driver = webdriver.Chrome('/Users/temesgenalemayehu/Downloads/chromedriver', options = options)
+    # options.add_experimental_option("prefs", {
+    # "download.default_directory": r"/Users/temesgenalemayehu/Downloads",
+    # "download.prompt_for_download": False,
+    # "download.directory_upgrade": True,
+    # "safebrowsing_for_trusted_sources_enabled": False,
+    # "safebrowsing.enabled": False
+    # })
+    driver = webdriver.Chrome('/Users/temesgenalemayehu/Downloads/chromedriver_mac_arm64-2/chromedriver', options = options)
     driver.get("https://www.google.com")
+    
     # time.sleep(1)
-    WebDriverWait(driver, 3).until(
-        EC.element_to_be_clickable((By.XPATH, "//input[@class='gLFyf gsfi']"))
+    WebDriverWait(driver, 5).until(
+        EC.element_to_be_clickable((By.ID, "input"))
         ).send_keys("yahoo finance", Keys.ENTER)
     # driver.find_element(By.XPATH, "//input[@class='gLFyf gsfi']").send_keys("yahoo finance", Keys.ENTER)
     WebDriverWait(driver, 3).until(

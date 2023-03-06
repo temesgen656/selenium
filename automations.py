@@ -23,8 +23,6 @@ def yahooNio():
     # })
     driver = webdriver.Chrome('/Users/temesgenalemayehu/Downloads/chromedriver_mac_arm64-2/chromedriver', options = options)
     driver.get("https://www.google.com")
-    "add"
-    
     # time.sleep(1)
     WebDriverWait(driver, 5).until(
         EC.element_to_be_clickable((By.ID, "input"))
